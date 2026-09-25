@@ -9,7 +9,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="FactionList" component={FactionListScreen} options={{ title: 'Factions' }} />
+        <Stack.Screen name="FactionList" component={FactionListScreen} options={{ title: 'Faction Factory' }} />
         <Stack.Screen name="FactionDetailScreen" component={FactionDetailScreen} options={{ title: 'Faction Detail' }} />
       </Stack.Navigator>
     </NavigationContainer>

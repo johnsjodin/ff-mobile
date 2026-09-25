@@ -1,5 +1,5 @@
-import TaskListScreen from './screens/TaskListScreen';
-import TaskDetailScreen from './screens/TaskDetailScreen';
+import FactionListScreen from './screens/FactionListScreen';
+import FactionDetailScreen from './screens/FactionDetailScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
  
@@ -9,8 +9,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="TaskList" component={TaskListScreen} options={{ title: 'Uppgifter' }} />
-        <Stack.Screen name="TaskDetail" component={TaskDetailScreen} options={{ title: 'Detaljer' }} />
+        <Stack.Screen name="FactionList" component={FactionListScreen} options={{ title: 'Factions' }} />
+        <Stack.Screen name="FactionDetailScreen" component={FactionDetailScreen} options={{ title: 'Faction Detail' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

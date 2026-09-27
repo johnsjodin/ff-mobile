@@ -11,18 +11,23 @@ function FactionListScreen({ navigation }) {
   const [error, setError] = useState(null);
  
   useEffect(() => {
+  return navigation.addListener('focus', loadFactions);
+  }, [navigation]);
+
+  function loadFactions() {
+    setLoading(true);
+    setError(null);
     fetch(API_URL)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Could not fetch data.');
         }
- 
         return response.json();
       })
       .then((data) => setFactionList(data))
       .catch(() => setError('Could not connect to the backend'))
       .finally(() => setLoading(false));
-  }, []);
+  }
  
     return (
         <View style={styles.container}>
